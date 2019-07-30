@@ -85,7 +85,7 @@ class App extends React.Component {
     return (
       <Container styles={styles.wrap}>
 
-        <StatusBar backgroundColor={"#f8509a"} barStyle="light-content" translucent animated />
+        <StatusBar backgroundColor={window.theme.primary} barStyle="light-content" translucent animated />
 
         <Root>
 

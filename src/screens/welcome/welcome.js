@@ -25,6 +25,8 @@ class WelcomeScreen extends Component {
                     backgroundColor={window.theme.body}
                 />
 
+                <Text>TOGETHER APP</Text>
+
 
             </View>
         )
