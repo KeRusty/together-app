@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { View, Text, Image, ImageBackground, StatusBar, TouchableOpacity } from 'react-native'
-import { Left, Right } from 'native-base'
+import { Container } from 'native-base'
 import { withNavigation } from 'react-navigation'
+
+import AppHeader from '../../components/appHeader/appHeader'
 
 import styles from './login-styles'
 
@@ -18,20 +20,25 @@ class RegisterScreen extends Component {
         const props = this.props;
 
         return (
-            <View style={styles.container}>
+            <Container>
 
-                <StatusBar
-                    barStyle="dark-content"
-                    backgroundColor={window.theme.body}
+                <AppHeader
+                    left="back"
+                    title="CREATE AN ACCOUNT"
                 />
 
+                <View style={styles.container}>
 
-                <View>
-                    <Text>Register Screen</Text>
+                    <View>
+                        <Text>Register Screen</Text>
+                    </View>
+
                 </View>
 
 
-            </View>
+
+
+            </Container>
         )
     }
 }
