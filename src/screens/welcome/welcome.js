@@ -32,7 +32,7 @@ class WelcomeScreen extends Component {
                 <View style={styles.buttonContainer}>
 
                     <View style={styles.loginButtonContainer}>
-                        <TouchableOpacity style={styles.loginButton}>
+                        <TouchableOpacity style={styles.loginButton} onPress={() => this.props.navigation.navigate('login')}>
                             <Text style={styles.buttonText}>Login & Continue</Text>
                         </TouchableOpacity>
                     </View>
@@ -42,7 +42,7 @@ class WelcomeScreen extends Component {
                     </View>
 
                     <View style={styles.registerButtonContainer}>
-                        <TouchableOpacity style={styles.registerButton}>
+                        <TouchableOpacity style={styles.registerButton} onPress={() => this.props.navigation.navigate('register')}>
                             <Text style={styles.buttonText}>Register</Text>
                         </TouchableOpacity>
                     </View>

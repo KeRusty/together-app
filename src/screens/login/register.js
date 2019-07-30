@@ -5,7 +5,7 @@ import { withNavigation } from 'react-navigation'
 
 import styles from './login-styles'
 
-class WelcomeScreen extends Component {
+class RegisterScreen extends Component {
 
 
     componentDidMount() {
@@ -26,9 +26,14 @@ class WelcomeScreen extends Component {
                 />
 
 
+                <View>
+                    <Text>Register Screen</Text>
+                </View>
+
+
             </View>
         )
     }
 }
 
-export default withNavigation(WelcomeScreen)
+export default withNavigation(RegisterScreen)
