@@ -4,7 +4,7 @@ const theme = {
     alt: "#7c54ff",
     body: "#ffffff",
     text: "#000000",
-    textAlt: "#ffffff",
+    textAlt: "#989898",
     facebook: "#3b5999",
     google: "#DB4437",
 

@@ -25,7 +25,29 @@ class WelcomeScreen extends Component {
                     backgroundColor={window.theme.body}
                 />
 
-                <Text>TOGETHER APP</Text>
+                <View>
+                    <Text>TOGETHER APP</Text>
+                </View>
+
+                <View style={styles.buttonContainer}>
+
+                    <View style={styles.loginButtonContainer}>
+                        <TouchableOpacity style={styles.loginButton}>
+                            <Text style={styles.buttonText}>Login & Continue</Text>
+                        </TouchableOpacity>
+                    </View>
+
+                    <View style={styles.noAccountContainer}>
+                        <Text style={styles.noAccountText}>Don't Have an account?</Text>
+                    </View>
+
+                    <View style={styles.registerButtonContainer}>
+                        <TouchableOpacity style={styles.registerButton}>
+                            <Text style={styles.buttonText}>Register</Text>
+                        </TouchableOpacity>
+                    </View>
+
+                </View>
 
 
             </View>
