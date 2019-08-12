@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, Image, ImageBackground, StatusBar, TouchableOpacity } from 'react-native'
+import { View, Text, Image, ScrollView, StatusBar, TouchableOpacity } from 'react-native'
 import { Container } from 'native-base'
 import { withNavigation } from 'react-navigation'
 
@@ -29,9 +29,40 @@ class LoginScreen extends Component {
 
                 <View style={styles.container}>
 
-                    <View>
-                        <Text>Login Screen</Text>
-                    </View>
+                    <ScrollView contentContainerStyle={styles.scrollView}> 
+
+                        <View>
+                            <Text style={styles.headingText}>Filter Your Match</Text>
+                        </View>
+
+                        <View style={styles.buttonContainer}>
+
+                            <View style={styles.buttonInnerContainer}>
+                                <TouchableOpacity style={styles.facebookButton} onPress={() => this.props.navigation.navigate('login')}>
+                                    <Text style={styles.buttonText}>Login with Facebook</Text>
+                                </TouchableOpacity>
+                            </View>
+
+                            <View style={styles.buttonInnerContainer}>
+                                <TouchableOpacity style={styles.googleButton} onPress={() => this.props.navigation.navigate('register')}>
+                                    <Text style={styles.buttonText}>Login with Google</Text>
+                                </TouchableOpacity>
+                            </View>
+
+                            <View style={styles.orContainer}>
+                                <Text style={styles.orText}>Or</Text>
+                            </View>
+
+                            <View style={styles.buttonInnerContainer}>
+                                <TouchableOpacity style={styles.createButton} onPress={() => this.props.navigation.navigate('register')}>
+                                    <Text style={styles.buttonText}>Create an Account</Text>
+                                </TouchableOpacity>
+                            </View>
+
+                        </View>
+
+                    </ScrollView>
+
 
                 </View>
 

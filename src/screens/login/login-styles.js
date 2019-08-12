@@ -1,5 +1,5 @@
 
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
 
 export default StyleSheet.create({
     container: {
@@ -8,5 +8,61 @@ export default StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: window.theme.body
     },
+    scrollView:{
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    buttonContainer: {
+        flexDirection: 'column',
+        alignItems: "center",
+        paddingVertical: 8
+    },
+    buttonInnerContainer: {
+        paddingVertical: 24
+    },
+    orContainer: {
+        paddingVertical: 8
+    },
+    facebookButton: {
+        backgroundColor: window.theme.facebook,
+        paddingHorizontal: 8,
+        paddingVertical: 16,
+        borderRadius: 24,
+        width: Dimensions.get('window').width * 0.6,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    googleButton: {
+        backgroundColor: window.theme.google,
+        paddingHorizontal: 8,
+        paddingVertical: 16,
+        borderRadius: 24,
+        width: Dimensions.get('window').width * 0.6,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    createButton:{
+        backgroundColor: window.theme.alt,
+        paddingHorizontal: 8,
+        paddingVertical: 16,
+        borderRadius: 24,
+        width: Dimensions.get('window').width * 0.6,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    headingText:{
+        color: window.theme.text,
+        fontSize: window.fs(20),
+        fontWeight: 'bold',
+    },
+    buttonText: {
+        color: window.theme.body,
+        fontSize: window.fs(16),
+    },
+    orText: {
+        color: window.theme.textAlt,
+        fontSize: window.fs(16),
+    }
 
 })
