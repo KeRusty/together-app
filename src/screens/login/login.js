@@ -24,7 +24,8 @@ class LoginScreen extends Component {
 
                 <AppHeader
                     left="back"
-                    title="LOGIN"
+                    animated={true}
+                    transparent={true}
                 />
 
                 <View style={styles.container}>

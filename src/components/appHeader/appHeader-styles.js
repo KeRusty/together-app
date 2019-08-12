@@ -48,7 +48,7 @@ export default StyleSheet.create({
         color: window.theme.text
     },
     headerBackButtonIcon: {
-        color: window.theme.body
+        color: window.theme.text
     },
     headerBookMarkButtonIcon: {
         color: 'white',

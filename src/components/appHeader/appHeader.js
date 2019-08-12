@@ -148,7 +148,7 @@ class AppHeader extends Component {
                             }
                             {this.props.title &&
                                 <Title style={styles.headerTitle}>
-                                    <Animated.Text style={{ color: window.theme.body }}>{this.props.title}</Animated.Text>
+                                    <Animated.Text style={{ color: window.theme.primary }}>{this.props.title}</Animated.Text>
                                 </Title>
                             }
                         </Body>

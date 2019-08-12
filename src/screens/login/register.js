@@ -24,7 +24,8 @@ class RegisterScreen extends Component {
 
                 <AppHeader
                     left="back"
-                    title="CREATE AN ACCOUNT"
+                    title="Register with Together"
+                    transparent={true}
                 />
 
                 <View style={styles.container}>
