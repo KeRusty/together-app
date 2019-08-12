@@ -6,7 +6,8 @@ export default StyleSheet.create({
     input: {
         height: 48,
         width: "100%",
-        borderColor: window.theme.text,
+        borderColor: window.theme.textAlt,
+        borderRadius: 16,
         backgroundColor: window.theme.body,
         borderWidth: 1,
         padding: 8,

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { View, Text, Image, ScrollView, StatusBar, TouchableOpacity } from 'react-native'
 import { Container, Form } from 'native-base'
 import { withNavigation } from 'react-navigation'
+import KeyboardSpacer from 'react-native-keyboard-spacer';
 
 import AppHeader from '../../components/appHeader/appHeader'
 import Input from '../../components/form/input'
@@ -56,10 +57,6 @@ class RegisterScreen extends Component {
                 <View style={styles.container}>
 
                     <ScrollView contentContainerStyle={styles.scrollView}> 
-
-                        <View>
-                           <Text>Register Screen</Text>
-                        </View>
 
                         <Form style={styles.form}>
 
@@ -132,10 +129,9 @@ class RegisterScreen extends Component {
                                     onSubmitEditing={() => { this.refs.passwordInput.focus() }}
                                 />
 
-
-
-
                             </View>
+
+                            <KeyboardSpacer />
 
                         </Form>
 
