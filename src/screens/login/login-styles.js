@@ -9,9 +9,20 @@ export default StyleSheet.create({
         backgroundColor: window.theme.body
     },
     scrollView:{
-        flex: 1,
+        flexGrow: 1,
+        alignSelf: "center",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+    },
+    form: {
+        width: Dimensions.get('window').width * 0.8,
         alignItems: 'center',
-        justifyContent: 'center',
+        marginBottom: 32
+    },
+    keyboard: {
+        width: "100%",
     },
     buttonContainer: {
         flexDirection: 'column',
