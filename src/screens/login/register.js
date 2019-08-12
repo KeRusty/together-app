@@ -44,6 +44,7 @@ class RegisterScreen extends Component {
     render() {
 
         const props = this.props;
+        const {values} = this.state;
 
         return (
             <Container>
@@ -68,19 +69,8 @@ class RegisterScreen extends Component {
                                     keyboardType="email-address"
                                     textContentType="username"
                                     returnKeyType="next"
-                                    onChangeText={(value) => { this.onChange('email', value); }}
-                                    ref={"emailInput"}
-                                    onSubmitEditing={() => { this.refs.passwordInput.focus() }}
-                                />
-
-                                <Input
-                                    name="username"
-                                    placeholder="Username"
-                                    keyboardType="email-address"
-                                    textContentType="username"
-                                    returnKeyType="next"
-                                    onChangeText={(value) => { this.onChange('email', value); }}
-                                    ref={"emailInput"}
+                                    onChangeText={(value) => { this.onChange('username', value); }}
+                                    ref={"usernameInput "}
                                     onSubmitEditing={() => { this.refs.passwordInput.focus() }}
                                 />
 
@@ -90,9 +80,9 @@ class RegisterScreen extends Component {
                                     keyboardType="default"
                                     textContentType="password"
                                     returnKeyType="next"
-                                    onChangeText={(value) => { this.onChange('email', value); }}
-                                    ref={"emailInput"}
-                                    onSubmitEditing={() => { this.refs.passwordInput.focus() }}
+                                    onChangeText={(value) => { this.onChange('password', value); }}
+                                    ref={"passwordInput"}
+                                    onSubmitEditing={() => { this.refs.confirmPasswordInput.focus() }}
                                 />
 
                                 <Input
@@ -101,9 +91,9 @@ class RegisterScreen extends Component {
                                     keyboardType="default"
                                     textContentType="password"
                                     returnKeyType="next"
-                                    onChangeText={(value) => { this.onChange('email', value); }}
-                                    ref={"emailInput"}
-                                    onSubmitEditing={() => { this.refs.passwordInput.focus() }}
+                                    onChangeText={(value) => { this.onChange('confirmPassword', value); }}
+                                    ref={"confirmPasswordInput"}
+                                    onSubmitEditing={() => { this.refs.emailInput.focus() }}
                                 />
 
 
@@ -115,7 +105,7 @@ class RegisterScreen extends Component {
                                     returnKeyType="next"
                                     onChangeText={(value) => { this.onChange('email', value); }}
                                     ref={"emailInput"}
-                                    onSubmitEditing={() => { this.refs.passwordInput.focus() }}
+                                    onSubmitEditing={() => { this.refs.mobileInput.focus() }}
                                 />
 
                                 <Input
@@ -124,11 +114,16 @@ class RegisterScreen extends Component {
                                     keyboardType="phone-pad"
                                     textContentType="telephoneNumber"
                                     returnKeyType="next"
-                                    onChangeText={(value) => { this.onChange('email', value); }}
-                                    ref={"emailInput"}
-                                    onSubmitEditing={() => { this.refs.passwordInput.focus() }}
+                                    onChangeText={(value) => { this.onChange('mobile', value); }}
+                                    ref={"mobileInput"}
                                 />
 
+                            </View>
+
+                            <View style={styles.buttonInnerContainer}>
+                                <TouchableOpacity style={styles.createButton} onPress={() => this.props.navigation.navigate('personalInfo', values)}>
+                                    <Text style={styles.buttonText}>JOIN NOW!</Text>
+                                </TouchableOpacity>
                             </View>
 
                             <KeyboardSpacer />

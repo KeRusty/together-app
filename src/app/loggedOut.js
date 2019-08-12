@@ -4,9 +4,10 @@ import React from 'react';
 import { createStackNavigator, createAppContainer } from 'react-navigation'
 
 // StackNavigator screens
-import WelcomeScreen from '../screens/welcome/welcome'
-import RegisterScreen from '../screens/login/register'
-import LoginScreen from '../screens/login/login'
+import WelcomeScreen from '../screens/welcome/welcome';
+import RegisterScreen from '../screens/login/register';
+import LoginScreen from '../screens/login/login';
+import PersonalInfoScreen from '../screens/personal-info/personal-info';
 
 export const NavAppLoggedOut = createStackNavigator({
     welcome: {
@@ -17,6 +18,9 @@ export const NavAppLoggedOut = createStackNavigator({
     },
     login: {
         screen: LoginScreen
+    },
+    personalInfo: {
+        screen: PersonalInfoScreen
     },
 }, {
         initialRouteName: 'welcome',
