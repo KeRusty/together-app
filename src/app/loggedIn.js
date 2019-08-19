@@ -5,7 +5,7 @@ import { createStackNavigator, createAppContainer } from "react-navigation";
 import { Easing, Animated } from 'react-native';
 
 // StackNavigator screens
-import WelcomeScreen from '../screens/welcome/welcome'
+import LookingForScreen from '../screens/looking-for/looking-for';
 import RegisterScreen from '../screens/login/register'
 import LoginScreen from '../screens/login/login'
 
@@ -24,9 +24,8 @@ const transitionConfig = () => {
 export const NavApp = createStackNavigator(
     {
 
-        news: {
-            screen: WelcomeScreen,
-            navigationOptions: { title: "NEWS" }
+        lookingFor: {
+            screen: LookingForScreen,
         },
     },
     {

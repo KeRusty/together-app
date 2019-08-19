@@ -47,7 +47,8 @@ class YourInterests extends Component {
         const props = this.props;
         const {info, values} = this.state;
 
-        console.log(info)
+        console.log(values, "values")
+        console.log(info, "info")
 
         return (
             <Container>
@@ -157,7 +158,7 @@ class YourInterests extends Component {
                                 placeholder={{ "label": "Select Drinking preferrence" }}
                                 items={[
                                     { "label": "Yes", "value": "yes" },
-                                    { "label": "Ocasionslly", "value": "ocasionally" },
+                                    { "label": "Ocasionally", "value": "ocasionally" },
                                     { "label": "No", "value": "no" },
                                 ]}
                             />
@@ -170,7 +171,7 @@ class YourInterests extends Component {
                                 placeholder={{ "label": "Select Smoking preferrence" }}
                                 items={[
                                     { "label": "Yes", "value": "yes" },
-                                    { "label": "Ocasionslly", "value": "ocasionally" },
+                                    { "label": "Ocasionally", "value": "ocasionally" },
                                     { "label": "No", "value": "no" },
                                 ]}
                             />
@@ -178,7 +179,7 @@ class YourInterests extends Component {
                             </View>
 
                             <View style={styles.buttonInnerContainer}>
-                                <TouchableOpacity style={styles.createButton}>
+                                <TouchableOpacity style={styles.createButton} onPress={()=> this.props.navigation.navigate('lookingFor')}>
                                     <Text style={styles.buttonText}>NEXT</Text>
                                 </TouchableOpacity>
                             </View>
