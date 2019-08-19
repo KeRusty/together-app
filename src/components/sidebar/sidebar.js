@@ -9,11 +9,14 @@ class Sidebar extends PureComponent {
     constructor(props) {
         super(props);
 
-        this.state = {};
+        this.state = {
+            premium: false
+        };
     }
 
     render() {
         const { navigate } = this.props;
+        const { premium } = this.state;
         const user = this.props.user;
 
         return (
@@ -21,15 +24,17 @@ class Sidebar extends PureComponent {
 
                 <ScrollView contentContainerStyle={{ minHeight: "100%", flexDirection: "column" }}>
 
-                    <View style={styles.upgradeContainer}>
-                        <TouchableOpacity>
-                            <Icon  style={styles.upgradeIcon} name="ios-close" type="Ionicons"/>  
-                        </TouchableOpacity>
+                    {!premium && 
+                        <View style={styles.upgradeContainer}>
+                            <TouchableOpacity>
+                                <Icon  style={styles.upgradeIcon} name="ios-close" type="Ionicons"/>  
+                            </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.upgradeButtonContainer}>
-                            <Text style={styles.upgradeText}>Upgrade to Premium</Text>
-                        </TouchableOpacity>
-                    </View>
+                            <TouchableOpacity style={styles.upgradeButtonContainer}>
+                                <Text style={styles.upgradeText}>Upgrade to Premium</Text>
+                            </TouchableOpacity>
+                        </View>
+                    }
 
                     <View style={styles.topNavListContainer}>
 
