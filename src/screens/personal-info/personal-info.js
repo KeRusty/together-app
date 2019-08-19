@@ -109,7 +109,7 @@ class RegisterScreen extends Component {
                             </View>
 
                             <View style={styles.buttonInnerContainer}>
-                                <TouchableOpacity style={styles.createButton} onPress={() => this.props.navigation.navigate('yourInterests', values, register )}>
+                                <TouchableOpacity style={styles.createButton} onPress={() => this.props.navigation.navigate('yourInterests', {...this.state} )}>
                                     <Text style={styles.buttonText}>NEXT</Text>
                                 </TouchableOpacity>
                             </View>
