@@ -79,6 +79,7 @@ class RegisterScreen extends Component {
                                     placeholder="Password"
                                     keyboardType="default"
                                     textContentType="password"
+                                    secureTextEntry={true}
                                     returnKeyType="next"
                                     onChangeText={(value) => { this.onChange('password', value); }}
                                     ref={"passwordInput"}
@@ -89,6 +90,7 @@ class RegisterScreen extends Component {
                                     name="confirmPassword"
                                     placeholder="Confirm Password"
                                     keyboardType="default"
+                                    secureTextEntry={true}
                                     textContentType="password"
                                     returnKeyType="next"
                                     onChangeText={(value) => { this.onChange('confirmPassword', value); }}
