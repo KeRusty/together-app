@@ -1,7 +1,9 @@
 const theme = {
     primary: "#f8509a",
     secondary: "#fe62a7",
+    tertiary: "#7349FC",
     alt: "#7c54ff",
+    upgrade: "#fcae3f",
     body: "#ffffff",
     text: "#000000",
     textAlt: "#989898",

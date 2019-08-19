@@ -13,7 +13,7 @@ export default StyleSheet.create({
    },
    groomContainer:{
         height: Dimensions.get('window').height * 0.5,
-        backgroundColor: window.theme.alt,
+        backgroundColor: window.theme.tertiary,
         justifyContent: 'center',
         alignItems: 'center'
    },
