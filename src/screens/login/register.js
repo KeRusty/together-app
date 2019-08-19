@@ -86,7 +86,7 @@ class RegisterScreen extends Component {
                                 />
 
                                 <Input
-                                    name="confimrPassword"
+                                    name="confirmPassword"
                                     placeholder="Confirm Password"
                                     keyboardType="default"
                                     textContentType="password"

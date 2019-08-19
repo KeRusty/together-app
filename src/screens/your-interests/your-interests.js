@@ -7,9 +7,9 @@ import KeyboardSpacer from 'react-native-keyboard-spacer';
 import AppHeader from '../../components/appHeader/appHeader'
 import Input from '../../components/form/input'
 
-import styles from './personal-info-styles'
+import styles from './your-interests-styles'
 
-class RegisterScreen extends Component {
+class YourInterests extends Component {
 
     constructor(props) {
 
@@ -19,7 +19,7 @@ class RegisterScreen extends Component {
             key: Date.now(),
             loading: false,
             values: {},
-            register: this.props.navigation.state.params
+            register: this.props.navigation.state.params,
         }
 
         this.onChange = this.onChange.bind(this);
@@ -47,12 +47,15 @@ class RegisterScreen extends Component {
         const props = this.props;
         const {register, values} = this.state;
 
+        console.log(register, "register")
+        console.log(values, "values")
+
         return (
             <Container>
 
                 <AppHeader
                     left="back"
-                    title="Personal Info"
+                    title="Your Interests"
                     transparent={true}
                 />
 
@@ -109,7 +112,7 @@ class RegisterScreen extends Component {
                             </View>
 
                             <View style={styles.buttonInnerContainer}>
-                                <TouchableOpacity style={styles.createButton} onPress={() => this.props.navigation.navigate('yourInterests', values, register )}>
+                                <TouchableOpacity style={styles.createButton}>
                                     <Text style={styles.buttonText}>NEXT</Text>
                                 </TouchableOpacity>
                             </View>
@@ -130,4 +133,4 @@ class RegisterScreen extends Component {
     }
 }
 
-export default withNavigation(RegisterScreen)
+export default withNavigation(YourInterests)

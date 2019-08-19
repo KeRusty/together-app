@@ -8,6 +8,7 @@ import WelcomeScreen from '../screens/welcome/welcome';
 import RegisterScreen from '../screens/login/register';
 import LoginScreen from '../screens/login/login';
 import PersonalInfoScreen from '../screens/personal-info/personal-info';
+import YourInterestsScreen from '../screens/your-interests/your-interests';
 
 export const NavAppLoggedOut = createStackNavigator({
     welcome: {
@@ -21,6 +22,9 @@ export const NavAppLoggedOut = createStackNavigator({
     },
     personalInfo: {
         screen: PersonalInfoScreen
+    },
+    yourInterests: {
+        screen: YourInterestsScreen
     },
 }, {
         initialRouteName: 'welcome',
