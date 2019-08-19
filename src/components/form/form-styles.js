@@ -24,17 +24,17 @@ export default StyleSheet.create({
     },
 
     label: {
-        width: "36%",
-        paddingVertical: 16,
+        width: "100%",
+        paddingVertical: 8,
     },
 
     labelText: {
-        fontSize: window.fs(16),
+        fontSize: window.fs(12),
         color: window.theme.textAlt
     },
 
     field: {
-        width: "64%",
+        width: "100%",
     },
 
     textInput: {
@@ -46,7 +46,16 @@ export default StyleSheet.create({
     dateInput: {
     },
 
+    pickerInputContainer:{
+
+    },
+
     pickerInput: {
+        flexDirection: 'column',
+        borderRadius: 12,
+        borderColor: window.theme.textAlt,
+        borderWidth: 1,
+        fontSize: window.fs(12)
     },
 
 })
