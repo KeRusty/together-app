@@ -7,6 +7,8 @@ import { useScreens } from 'react-native-screens';
 import theme from "./src/app/theme";
 import { NavContainer } from "./src/app/loggedIn";
 import { NavLoggedOutCoutainer } from "./src/app/loggedOut";
+import DrawerLayout from 'react-native-gesture-handler/DrawerLayout';
+import Sidebar from './src/components/sidebar/sidebar';
 import { AppProvider } from "./src/app/app";
 
 import styles from './app-styles'
@@ -20,8 +22,8 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      currentToken: null,
-      currentUser: null,
+      currentToken: "yes",
+      currentUser: "yes",
     };
 
   }
@@ -91,11 +93,35 @@ class App extends React.Component {
 
           <AppProvider>
 
-            <NavLoggedOutCoutainer
-              persistNavigationState={persistNavigationState}
-              loadNavigationState={loadNavigationState}
-              ref={el => { this.nav = el }}
-            />
+              {currentToken && currentUser ?
+                  (
+                      <DrawerLayout
+                          ref={el => { this.sidebar = el }}
+                          drawerWidth={240}
+                          drawerPosition={DrawerLayout.positions.Left}
+                          drawerType='front'
+                          drawerBackgroundColor="#242134"
+                          hideStatusBar={true}
+                          renderNavigationView={() => (<Sidebar navigate={this.navigate} user={currentUser} />)}>
+
+                          <NavContainer
+                              persistNavigationState={persistNavigationState}
+                              loadNavigationState={loadNavigationState}
+                              ref={el => { this.nav = el }}
+                          />
+
+                      </DrawerLayout>
+
+                  ) : (
+
+                      <NavLoggedOutCoutainer
+                          persistNavigationState={persistNavigationState}
+                          loadNavigationState={loadNavigationState}
+                          ref={el => { this.nav = el }}
+                      />
+
+                  )
+              }
 
           </AppProvider>
 

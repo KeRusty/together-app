@@ -29,7 +29,7 @@ export const NavApp = createStackNavigator(
         },
     },
     {
-        initialRouteName: "news",
+        initialRouteName: "lookingFor",
         headerMode: "none",
         transitionConfig
     }
