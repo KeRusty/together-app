@@ -12,10 +12,10 @@ export default StyleSheet.create({
        alignItems: 'center'
    },
    groomContainer:{
-    height: Dimensions.get('window').height * 0.5,
-    backgroundColor: window.theme.alt,
-    justifyContent: 'center',
-       alignItems: 'center'
+        height: Dimensions.get('window').height * 0.5,
+        backgroundColor: window.theme.alt,
+        justifyContent: 'center',
+        alignItems: 'center'
    },
    text:{
        color: window.theme.body,

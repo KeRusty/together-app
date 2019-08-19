@@ -47,7 +47,8 @@ export default StyleSheet.create({
         paddingVertical: 16,
         paddingHorizontal: 16,
         justifyContent: 'flex-start',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        flexGrow: 1
     },
     navListDetails: {
         flexDirection: 'row',

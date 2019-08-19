@@ -21,7 +21,7 @@ class Sidebar extends PureComponent {
 
                 <ScrollView contentContainerStyle={{ minHeight: "100%", flexDirection: "column" }}>
 
-                    <View style={[styles.topNavListContainer, { flex: 1 }]}>
+                    <View style={styles.topNavListContainer}>
 
                         <TouchableOpacity style={styles.navListDetails} onPress={() => navigate("news")}>
                             <Text style={styles.navListText}>Edit Profile</Text>
@@ -44,6 +44,14 @@ class Sidebar extends PureComponent {
                         </TouchableOpacity>
 
                     </View>
+
+                    <View style={styles.topNavListContainer}>
+                        <TouchableOpacity style={styles.navListDetails}>
+                            <Text style={styles.navListText}>Logout</Text>
+                        </TouchableOpacity>
+                    </View>
+
+                    <Text style={styles.version}>v{Constants.manifest.version}</Text>
 
                 </ScrollView>
 
