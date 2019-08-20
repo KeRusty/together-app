@@ -4,6 +4,7 @@ const theme = {
     tertiary: "#7349FC",
     alt: "#7c54ff",
     upgrade: "#fcae3f",
+    background: "#f5f5f5",
     body: "#ffffff",
     text: "#000000",
     textAlt: "#989898",
