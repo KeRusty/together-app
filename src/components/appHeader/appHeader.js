@@ -139,7 +139,7 @@ class AppHeader extends Component {
                         <Left style={styles.left}></Left>
                     }
 
-                    {(this.props.title || this.props.smallTitle) &&
+                    {/*(this.props.title || this.props.smallTitle) &&
                         <Body style={styles.body}>
                             {this.props.smallTitle &&
                                 <Title style={styles.headerTitleSmall}>
@@ -149,6 +149,21 @@ class AppHeader extends Component {
                             {this.props.title &&
                                 <Title style={styles.headerTitle}>
                                     <Animated.Text style={{ color: window.theme.primary }}>{this.props.title}</Animated.Text>
+                                </Title>
+                            }
+                        </Body>
+                        */}
+
+                    {(this.props.title && this.props.smallTitle && this.props.profile) &&
+                        <Body style={styles.body}>
+                            {this.props.smallTitle &&
+                                <Title style={styles.headerTitleSmallProfile}>
+                                    <Animated.Text style={{ color: this.headerColorAlt }}>{this.props.smallTitle}</Animated.Text>
+                                </Title>
+                            }
+                            {this.props.title &&
+                                <Title style={styles.headerTitleProfile}>
+                                    <Animated.Text style={{ color: window.theme.tertiary }}>{this.props.title}</Animated.Text>
                                 </Title>
                             }
                         </Body>

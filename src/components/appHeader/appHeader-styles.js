@@ -31,6 +31,13 @@ export default StyleSheet.create({
         fontWeight: '400',
         fontSize: (Platform.OS === 'ios' ? 16 : 20)
     },
+    headerTitleProfile: {
+        display: "flex",
+        flexDirection: "column",
+        color: window.theme.primary,
+        fontWeight: '400',
+        fontSize: (Platform.OS === 'ios' ? 20 : 24)
+    },
     headerTitleWhite: {
         color: window.theme.text,
         fontWeight: '400',
@@ -43,6 +50,12 @@ export default StyleSheet.create({
         fontWeight: '400',
         fontSize: (Platform.OS === 'ios' ? 12 : 16),
         marginBottom: -6,
+    },
+    headerTitleSmallProfile: {
+        color: window.theme.headerColorAlt,
+        fontWeight: '400',
+        fontSize: (Platform.OS === 'ios' ? 16 : 20),
+        marginBottom: -4,
     },
     headerMenuButtonIcon: {
         color: window.theme.text
