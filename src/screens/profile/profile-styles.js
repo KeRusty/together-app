@@ -60,7 +60,7 @@ export default StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: window.theme.textAlt
+        backgroundColor: window.theme.background
     },
     buttonContainer:{
         paddingVertical: 16,

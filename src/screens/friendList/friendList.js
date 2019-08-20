@@ -4,6 +4,7 @@ import { Container} from 'native-base'
 import { withNavigation } from 'react-navigation'
 
 import AppHeader from '../../components/appHeader/appHeader'
+import SearchBox from '../../components/searchBox/searchBox'
 
 import styles from './friendList-styles'
 
@@ -34,14 +35,15 @@ class FriendListScreen extends Component {
 
                 <AppHeader
                     left="back"
-                    right="menu"
+                    right="profile"
                     title={"Friends"}
                     list={true}
                     animated={true}
                 />
 
 
-                
+            
+                <SearchBox/>
                 
 
 
