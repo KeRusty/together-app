@@ -38,7 +38,7 @@ class Sidebar extends PureComponent {
 
                     <View style={styles.topNavListContainer}>
 
-                        <TouchableOpacity style={styles.navListDetails} onPress={() => navigate("news")}>
+                        <TouchableOpacity style={styles.navListDetails} onPress={() => navigate('profile')}>
                             <Icon  style={styles.navListIcon} name="ios-contact" type="Ionicons"/>    
                             <Text style={styles.navListText}>Edit Profile</Text>
                         </TouchableOpacity>

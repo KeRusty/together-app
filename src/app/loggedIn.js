@@ -5,9 +5,13 @@ import { createStackNavigator, createAppContainer } from "react-navigation";
 import { Easing, Animated } from 'react-native';
 
 // StackNavigator screens
+
+// Looking For
 import LookingForScreen from '../screens/looking-for/looking-for';
-import RegisterScreen from '../screens/login/register'
-import LoginScreen from '../screens/login/login'
+
+// Profile
+import ProfileScreen from '../screens/profile/profile';
+
 
 
 const transitionConfig = () => {
@@ -26,6 +30,9 @@ export const NavApp = createStackNavigator(
 
         lookingFor: {
             screen: LookingForScreen,
+        },
+        profile: {
+            screen: ProfileScreen,
         },
     },
     {

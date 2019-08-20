@@ -5,6 +5,7 @@ import { Container, View, Drawer, Root } from "native-base";
 import { useScreens } from 'react-native-screens';
 
 import theme from "./src/app/theme";
+//import { NavigationActions, StackActions } from 'react-navigation';
 import { NavContainer } from "./src/app/loggedIn";
 import { NavLoggedOutCoutainer } from "./src/app/loggedOut";
 import DrawerLayout from 'react-native-gesture-handler/DrawerLayout';
@@ -25,6 +26,30 @@ class App extends React.Component {
       currentToken: "yes",
       currentUser: "yes",
     };
+
+    this.showSidebar = this.showSidebar.bind(this);
+    this.hideSidebar = this.hideSidebar.bind(this);
+    this.navigate = this.navigate.bind(this);
+    this.resetNavigation = this.resetNavigation.bind(this);
+
+  }
+
+
+  showSidebar() {
+
+    const { sidebar } = this;
+
+    // if (sidebar) sidebar._root.open(true);
+    if (sidebar) sidebar.openDrawer();
+
+  }
+
+  hideSidebar() {
+
+      const { sidebar } = this;
+
+      // if (sidebar) sidebar._root.close(false);
+      if (sidebar) sidebar.closeDrawer();
 
   }
 
@@ -91,7 +116,12 @@ class App extends React.Component {
 
         <Root>
 
-          <AppProvider>
+          <AppProvider
+              value={{
+                showSidebar: this.showSidebar,
+                hideSidebar: this.hideSidebar,
+              }}
+          >
 
               {currentToken && currentUser ?
                   (
