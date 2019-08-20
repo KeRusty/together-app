@@ -109,7 +109,7 @@ class AppHeader extends Component {
                         this.props.left()
                     }
 
-                    {this.props.left == 'back' &&
+                    {(this.props.left == 'back' && !this.props.list) &&
                         <Left style={styles.left}>
                             <Button
                                 transparent
@@ -117,12 +117,12 @@ class AppHeader extends Component {
                                 onPress={() => { this.props.navigation.goBack(null); }}
                             >
 
-                                {this.animated &&
+                                {(this.animated && this.props.list) &&
                                     <Animated.View style={{ width: this.hideOnScroll }}>
                                         <Icon style={{ color: window.theme.headerTransparentColor }} type="MaterialIcons" name="arrow-back" />
                                     </Animated.View>
                                 }
-                                {this.animated &&
+                                {(this.animated && !this.props.list) &&
                                     <Animated.View style={{ width: this.showOnScroll }}>
                                         <Icon style={{ color: window.theme.headerColor }} type="MaterialIcons" name="arrow-back" />
                                     </Animated.View>
@@ -135,11 +135,27 @@ class AppHeader extends Component {
                         </Left>
                     }
 
+                    {(this.props.left === 'back' && this.props.list) &&
+                        <Left style={styles.left}>
+                            <Button
+                                transparent
+                                title="Back"
+                                onPress={() => { this.props.navigation.goBack(null); }}
+                            >  
+                                {!this.animated &&
+                                    <Icon style={{color: window.theme.headerTransparentColor}} type="MaterialIcons" name='arrow-back' />
+                                }
+
+                            </Button>
+                        </Left>
+                    }
+
+
                     {!this.props.left &&
                         <Left style={styles.left}></Left>
                     }
 
-                    {/*(this.props.title || this.props.smallTitle) &&
+                    {(this.props.title && !this.props.smallTitle && !this.props.profile) &&
                         <Body style={styles.body}>
                             {this.props.smallTitle &&
                                 <Title style={styles.headerTitleSmall}>
@@ -148,11 +164,11 @@ class AppHeader extends Component {
                             }
                             {this.props.title &&
                                 <Title style={styles.headerTitle}>
-                                    <Animated.Text style={{ color: window.theme.primary }}>{this.props.title}</Animated.Text>
+                                    <Animated.Text style={{ color: window.theme.body }}>{this.props.title}</Animated.Text>
                                 </Title>
                             }
                         </Body>
-                        */}
+                    }
 
                     {(this.props.title && this.props.smallTitle && this.props.profile) &&
                         <Body style={styles.body}>
@@ -170,27 +186,27 @@ class AppHeader extends Component {
                     }
 
 
-                    {this.props.right == 'menu' &&
+                    {this.props.right == 'profile' &&
                         <Right style={styles.right}>
                             <Button
                                 transparent
-                                title="Menu"
-                                onPress={() => { this.props.app.showSidebar() }}
+                                title="Profile"
+                                onPress={() => { this.props.navigation.navigate('profile') }}
                                 style={styles.headerMenuButton}
                             >
 
                                 {this.animated &&
                                     <Animated.View style={{ width: this.hideOnScroll }}>
-                                        <Icon style={{ color: window.theme.headerTransparentColor }} name="menu" />
+                                        <Icon style={{ color: window.theme.headerTransparentColor }} name="ios-contact" type="Ionicons" />
                                     </Animated.View>
                                 }
                                 {this.animated &&
                                     <Animated.View style={{ width: this.showOnScroll }}>
-                                        <Icon style={{ color: window.theme.headerColor }} name="menu" />
+                                        <Icon style={{ color: window.theme.headerColor }} name="ios-contact" type="Ionicons"/>
                                     </Animated.View>
                                 }
                                 {!this.animated &&
-                                    <Icon style={styles.headerBackButtonIcon} name='menu' />
+                                    <Icon style={{ color: window.theme.headerTransparentColor }} name='ios-contact' type="Ionicons"/>
                                 }
 
                             </Button>

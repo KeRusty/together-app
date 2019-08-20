@@ -98,13 +98,13 @@ class ProfileScreen extends Component {
 
                         <View style={styles.buttonContainer}>
                             <TouchableOpacity style={styles.likeButton}>
-                                <Text>Messages</Text>
+                                <Text>Likes</Text>
                             </TouchableOpacity>
                         </View>
 
                         <View style={styles.buttonContainer}>
-                            <TouchableOpacity style={styles.messageButton}>
-                                <Text>Messages</Text>
+                            <TouchableOpacity style={styles.messageButton} onPress={()=> this.props.navigation.navigate('friendList')}>
+                                <Text>Friends</Text>
                             </TouchableOpacity>
                         </View>
 

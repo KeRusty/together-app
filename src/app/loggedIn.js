@@ -12,6 +12,9 @@ import LookingForScreen from '../screens/looking-for/looking-for';
 // Profile
 import ProfileScreen from '../screens/profile/profile';
 
+//FriendList
+import FriendListScreen from '../screens/friendList/friendList';
+
 
 
 const transitionConfig = () => {
@@ -33,6 +36,9 @@ export const NavApp = createStackNavigator(
         },
         profile: {
             screen: ProfileScreen,
+        },
+        friendList: {
+            screen: FriendListScreen,
         },
     },
     {
