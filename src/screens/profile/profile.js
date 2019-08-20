@@ -42,7 +42,7 @@ class ProfileScreen extends Component {
                 />
 
 
-                <ScrollView style={styles.container}>
+                <ScrollView contentContainerStyle={styles.container}>
 
                     <View style={styles.profileContainer}>
 
@@ -88,8 +88,26 @@ class ProfileScreen extends Component {
                     </View>
 
 
-                    <View style={styles.buttonContainer}>
-                        <Text>TEST</Text>
+                    <View style={styles.buttonContainerOuter}>
+
+                        <View style={styles.buttonContainer}>
+                            <TouchableOpacity style={styles.messageButton}>
+                                <Text>Messages</Text>
+                            </TouchableOpacity>
+                        </View>
+
+                        <View style={styles.buttonContainer}>
+                            <TouchableOpacity style={styles.likeButton}>
+                                <Text>Messages</Text>
+                            </TouchableOpacity>
+                        </View>
+
+                        <View style={styles.buttonContainer}>
+                            <TouchableOpacity style={styles.messageButton}>
+                                <Text>Messages</Text>
+                            </TouchableOpacity>
+                        </View>
+
                     </View>
 
                 </ScrollView>

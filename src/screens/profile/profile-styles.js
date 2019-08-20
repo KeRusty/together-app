@@ -3,7 +3,8 @@ import { StyleSheet, Dimensions } from 'react-native'
 export default StyleSheet.create({
    container:{
        flex: 1,
-       backgroundColor: window.theme.body
+       backgroundColor: window.theme.body,
+       height: Dimensions.get('window').height
    },
    profileContainer:{
        height: Dimensions.get('window').height * 0.4,
@@ -53,8 +54,33 @@ export default StyleSheet.create({
         color: window.theme.alt,
         fontSize: window.fs(20)
     },
+    buttonContainerOuter:{
+        flex: 1,
+        flexGrow: 1,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: window.theme.textAlt
+    },
     buttonContainer:{
-        flexDirection: 'column',
-        alignSelf: 'flex-end'
+        paddingVertical: 16,
+        paddingHorizontal: 16
+    },
+    messageButton:{
+        width: 80,
+        height: 80,
+        borderRadius: 40,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: window.theme.body,
+    },
+    likeButton:{
+        width: 100,
+        height: 100,
+        borderRadius: 50,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: window.theme.alt,
     }
+
 })
