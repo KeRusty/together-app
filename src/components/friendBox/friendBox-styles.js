@@ -5,7 +5,7 @@ export default StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     paddingHorizontal: 16,
-    paddingVertical: 8
+    paddingVertical: 12
   },
   imageContainer: {
     paddingHorizontal: 4,
@@ -34,13 +34,15 @@ export default StyleSheet.create({
     backgroundColor: window.theme.status,
     width: 10,
     height: 10,
-    borderRadius: 5
+    borderRadius: 5,
+    paddingVertical: 4
   },
   statusLightAlt: {
     backgroundColor: window.theme.textAlt,
     width: 10,
     height: 10,
-    borderRadius: 5
+    borderRadius: 5,
+    paddingVertical: 4
   },
   nameText: {
     fontSize: window.fs(16),
@@ -58,5 +60,13 @@ export default StyleSheet.create({
   statusTextAlt: {
     fontSize: window.fs(12),
     color: window.theme.textAlt
+  },
+  messageText: {
+    fontSize: window.fs(12),
+    color: window.theme.secondary
+  },
+  messageIcon: {
+    fontSize: window.fs(32),
+    color: window.theme.secondary
   }
 });

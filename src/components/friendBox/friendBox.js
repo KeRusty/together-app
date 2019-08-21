@@ -1,10 +1,7 @@
 import React, { Component } from "react";
-import { View, Text, Image, ScrollView, TouchableOpacity } from "react-native";
-import { Container } from "native-base";
+import { View, Text, Image, TouchableOpacity } from "react-native";
+import { Icon } from "native-base";
 import { withNavigation } from "react-navigation";
-
-import AppHeader from "../../components/appHeader/appHeader";
-import SearchBox from "../../components/searchBox/searchBox";
 
 import styles from "./friendBox-styles";
 
@@ -18,7 +15,7 @@ class FriendBox extends Component {
   componentDidMount() {}
 
   render() {
-    const { name, message, status } = this.props;
+    const { name, message, status, type } = this.props;
 
     return (
       <TouchableOpacity style={styles.container}>
@@ -36,20 +33,36 @@ class FriendBox extends Component {
           </Text>
         </View>
 
-        <View style={styles.statusContainer}>
-          <View
-            style={[
-              status === "online" ? styles.statusLight : styles.statusLightAlt
-            ]}
-          />
-          <Text
-            style={[
-              status === "online" ? styles.statusText : styles.statusTextAlt
-            ]}
-          >
-            {status}
-          </Text>
-        </View>
+        {type === "friends" && (
+          <View style={styles.statusContainer}>
+            <View
+              style={[
+                status === "online" ? styles.statusLight : styles.statusLightAlt
+              ]}
+            />
+            <Text
+              style={[
+                status === "online" ? styles.statusText : styles.statusTextAlt
+              ]}
+            >
+              {status}
+            </Text>
+          </View>
+        )}
+
+        {type === "messages" && (
+          <View style={styles.statusContainer}>
+            <View>
+              <Icon
+                name="message-circle"
+                type="Feather"
+                style={styles.messageIcon}
+              />
+            </View>
+
+            <Text style={styles.messageText}>Message</Text>
+          </View>
+        )}
       </TouchableOpacity>
     );
   }

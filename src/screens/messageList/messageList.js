@@ -11,10 +11,9 @@ import { Container } from "native-base";
 import { withNavigation } from "react-navigation";
 
 import AppHeader from "../../components/appHeader/appHeader";
-import SearchBox from "../../components/searchBox/searchBox";
 import FriendBox from "../../components/friendBox/friendBox";
 
-import styles from "./friendList-styles";
+import styles from "./messageList-styles";
 
 class FriendListScreen extends Component {
   constructor(props) {
@@ -31,54 +30,52 @@ class FriendListScreen extends Component {
         <AppHeader
           left="back"
           right="profile"
-          title={"Friends"}
+          title={"Messages"}
           list={true}
           animated={true}
         />
-
-        <SearchBox />
 
         <ScrollView>
           <FriendBox
             name={"Ruwi Abeysekara"}
             message={"Hi, Thank you for adding"}
             status={"online"}
-            type={"friends"}
+            type={"messages"}
           />
 
           <FriendBox
             name={"Dihara Fernando"}
             message={"Hi, Thank you for adding"}
             status={"offline"}
-            type={"friends"}
+            type={"messages"}
           />
 
           <FriendBox
             name={"Nishi Senerathne"}
             message={"Hi, Thank you for adding"}
             status={"online"}
-            type={"friends"}
+            type={"messages"}
           />
 
           <FriendBox
             name={"Dilani Wijesinghe"}
             message={"Hi, Thank you for adding"}
             status={"offline"}
-            type={"friends"}
+            type={"messages"}
           />
 
           <FriendBox
             name={"Janani Dimithri"}
             message={"Hi, Thank you for adding"}
             status={"offline"}
-            type={"friends"}
+            type={"messages"}
           />
 
           <FriendBox
             name={"Lihini K Alwis"}
             message={"Hi, Thank you for adding"}
             status={"offline"}
-            type={"friends"}
+            type={"messages"}
           />
         </ScrollView>
       </Container>
