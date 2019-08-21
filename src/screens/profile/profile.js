@@ -77,7 +77,10 @@ class ProfileScreen extends Component {
             </View>
 
             <View style={styles.buttonContainer}>
-              <TouchableOpacity style={styles.likeButton}>
+              <TouchableOpacity
+                style={styles.likeButton}
+                onPress={() => this.props.navigation.navigate("requestList")}
+              >
                 <Text>Likes</Text>
               </TouchableOpacity>
             </View>

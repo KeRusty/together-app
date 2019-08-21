@@ -26,6 +26,14 @@ export default StyleSheet.create({
     alignSelf: "stretch",
     paddingHorizontal: 4
   },
+  requestContainer: {
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+    alignSelf: "stretch",
+    paddingHorizontal: 4
+  },
   image: {
     width: 60,
     height: 60
@@ -68,5 +76,15 @@ export default StyleSheet.create({
   messageIcon: {
     fontSize: window.fs(32),
     color: window.theme.secondary
+  },
+  yesIcon: {
+    fontSize: window.fs(32),
+    color: window.theme.status,
+    paddingHorizontal: 4
+  },
+  noIcon: {
+    fontSize: window.fs(32),
+    color: window.theme.secondary,
+    paddingHorizontal: 4
   }
 });

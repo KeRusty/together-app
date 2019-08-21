@@ -63,6 +63,26 @@ class FriendBox extends Component {
             <Text style={styles.messageText}>Message</Text>
           </View>
         )}
+
+        {type === "request" && (
+          <View style={styles.requestContainer}>
+            <TouchableOpacity>
+              <Icon
+                name="ios-checkmark-circle-outline"
+                type="Ionicons"
+                style={styles.yesIcon}
+              />
+            </TouchableOpacity>
+
+            <TouchableOpacity>
+              <Icon
+                name="ios-close-circle-outline"
+                type="Ionicons"
+                style={styles.noIcon}
+              />
+            </TouchableOpacity>
+          </View>
+        )}
       </TouchableOpacity>
     );
   }
