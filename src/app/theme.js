@@ -7,6 +7,7 @@ const theme = {
     background: "#f5f5f5",
     body: "#ffffff",
     text: "#000000",
+    status: '#4fec2f',
     textAlt: "#989898",
     facebook: "#3b5999",
     google: "#DB4437",

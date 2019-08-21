@@ -35,7 +35,7 @@ export default StyleSheet.create({
     infoBoxContainer:{
         flexDirection: 'row',
         borderBottomWidth: 1,
-        borderBottomColor: window.theme.textAlt,
+        borderBottomColor: window.theme.background,
         justifyContent: 'center',
         alignItems: 'center',
         paddingVertical: 16
@@ -64,7 +64,11 @@ export default StyleSheet.create({
     },
     buttonContainer:{
         paddingVertical: 16,
-        paddingHorizontal: 16
+        paddingHorizontal: 16,
+        overflow: 'hidden',
+        shadowColor: window.theme.textAlt,
+        shadowRadius: 8,
+        shadowOpacity: 0.5,
     },
     messageButton:{
         width: 80,
