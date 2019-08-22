@@ -50,20 +50,23 @@ class ProfileScreen extends Component {
           </View>
 
           <View style={styles.infoBoxContainer}>
-            <View style={styles.infoBoxContent}>
+            <TouchableOpacity
+              style={styles.infoBoxContent}
+              onPress={() => this.props.navigation.navigate("followers")}
+            >
               <Text style={styles.infoBoxHeadingText}>Followers</Text>
               <Text style={styles.infoBoxText}>203</Text>
-            </View>
+            </TouchableOpacity>
 
-            <View style={styles.infoBoxContent}>
+            <TouchableOpacity style={styles.infoBoxContent}>
               <Text style={styles.infoBoxHeadingText}>Following</Text>
               <Text style={styles.infoBoxText}>364</Text>
-            </View>
+            </TouchableOpacity>
 
-            <View style={styles.infoBoxContent}>
+            <TouchableOpacity style={styles.infoBoxContent}>
               <Text style={styles.infoBoxHeadingText}>Friends</Text>
               <Text style={styles.infoBoxText}>173</Text>
-            </View>
+            </TouchableOpacity>
           </View>
 
           <View style={styles.buttonContainerOuter}>

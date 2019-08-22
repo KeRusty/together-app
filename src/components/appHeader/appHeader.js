@@ -211,24 +211,49 @@ class AppHeader extends Component {
 
           {!this.props.left && <Left style={styles.left} />}
 
-          {this.props.title && !this.props.smallTitle && !this.props.profile && (
-            <Body style={styles.body}>
-              {this.props.smallTitle && (
-                <Title style={styles.headerTitleSmall}>
-                  <Animated.Text style={{ color: this.headerColorAlt }}>
-                    {this.props.smallTitle}
-                  </Animated.Text>
-                </Title>
-              )}
-              {this.props.title && (
-                <Title style={styles.headerTitle}>
-                  <Animated.Text style={{ color: window.theme.primary }}>
-                    {this.props.title}
-                  </Animated.Text>
-                </Title>
-              )}
-            </Body>
-          )}
+          {this.props.title &&
+            !this.props.smallTitle &&
+            !this.props.profile &&
+            !this.props.list && (
+              <Body style={styles.body}>
+                {this.props.smallTitle && (
+                  <Title style={styles.headerTitleSmall}>
+                    <Animated.Text style={{ color: this.headerColorAlt }}>
+                      {this.props.smallTitle}
+                    </Animated.Text>
+                  </Title>
+                )}
+                {this.props.title && (
+                  <Title style={styles.headerTitle}>
+                    <Animated.Text style={{ color: window.theme.primary }}>
+                      {this.props.title}
+                    </Animated.Text>
+                  </Title>
+                )}
+              </Body>
+            )}
+
+          {this.props.title &&
+            !this.props.smallTitle &&
+            !this.props.profile &&
+            this.props.list && (
+              <Body style={styles.body}>
+                {this.props.smallTitle && (
+                  <Title style={styles.headerTitleSmall}>
+                    <Animated.Text style={{ color: this.headerColorAlt }}>
+                      {this.props.smallTitle}
+                    </Animated.Text>
+                  </Title>
+                )}
+                {this.props.title && (
+                  <Title style={styles.headerTitle}>
+                    <Animated.Text style={{ color: window.theme.body }}>
+                      {this.props.title}
+                    </Animated.Text>
+                  </Title>
+                )}
+              </Body>
+            )}
 
           {this.props.title && this.props.smallTitle && this.props.profile && (
             <Body style={styles.body}>
