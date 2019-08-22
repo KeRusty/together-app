@@ -24,6 +24,7 @@ import RequestsListScreen from "../screens/newRequestsList/newRequestsList";
 
 //Follers & Following
 import FollowersScreen from "../screens/followers-list/followers-list";
+import FollowingScreen from "../screens/following-list/following-list";
 
 const transitionConfig = () => {
   return {
@@ -58,6 +59,9 @@ export const NavApp = createStackNavigator(
     },
     followers: {
       screen: FollowersScreen
+    },
+    following: {
+      screen: FollowingScreen
     }
   },
   {
