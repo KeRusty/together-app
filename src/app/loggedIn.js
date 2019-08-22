@@ -11,6 +11,7 @@ import LookingForScreen from "../screens/looking-for/looking-for";
 
 // Profile
 import ProfileScreen from "../screens/profile/profile";
+import FriendProfileScreen from "../screens/friend-profile/friend-profile";
 
 //FriendList
 import FriendListScreen from "../screens/friendList/friendList";
@@ -39,6 +40,9 @@ export const NavApp = createStackNavigator(
     },
     profile: {
       screen: ProfileScreen
+    },
+    friendProfile: {
+      screen: FriendProfileScreen
     },
     friendList: {
       screen: FriendListScreen
