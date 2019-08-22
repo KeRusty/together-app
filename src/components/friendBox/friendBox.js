@@ -88,6 +88,14 @@ class FriendBox extends Component {
             </TouchableOpacity>
           </View>
         )}
+
+        {type === "follower" && (
+          <View style={styles.statusContainer}>
+            <TouchableOpacity style={styles.followerButton}>
+              <Text style={styles.followerText}>Profile</Text>
+            </TouchableOpacity>
+          </View>
+        )}
       </TouchableOpacity>
     );
   }

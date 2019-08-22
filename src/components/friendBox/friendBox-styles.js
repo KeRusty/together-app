@@ -34,6 +34,12 @@ export default StyleSheet.create({
     alignSelf: "stretch",
     paddingHorizontal: 4
   },
+  followerButton: {
+    backgroundColor: window.theme.alt,
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    borderRadius: 16
+  },
   image: {
     width: 60,
     height: 60
@@ -86,5 +92,9 @@ export default StyleSheet.create({
     fontSize: window.fs(32),
     color: window.theme.secondary,
     paddingHorizontal: 4
+  },
+  followerText: {
+    fontSize: window.fs(16),
+    color: window.theme.body
   }
 });
