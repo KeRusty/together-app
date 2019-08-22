@@ -16,7 +16,7 @@ import FriendBox from "../../components/friendBox/friendBox";
 
 import styles from "./followers-list-styles";
 
-class FriendListScreen extends Component {
+class FollowersList extends Component {
   constructor(props) {
     super(props);
 
@@ -86,4 +86,4 @@ class FriendListScreen extends Component {
   }
 }
 
-export default withNavigation(FriendListScreen);
+export default withNavigation(FollowersList);
