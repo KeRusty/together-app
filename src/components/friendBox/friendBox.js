@@ -18,7 +18,12 @@ class FriendBox extends Component {
     const { name, message, status, type } = this.props;
 
     return (
-      <TouchableOpacity style={styles.container}>
+      <TouchableOpacity
+        style={styles.container}
+        onPress={() =>
+          this.props.navigation.navigate("friendProfile", { name })
+        }
+      >
         <View style={styles.imageContainer}>
           <Image
             style={styles.image}
